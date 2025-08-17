@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TEMPERATURE CONVERTER</title>
+        <style>
+            body{
+                background-color: #1a5096;
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            h1,p {
+                color: #ffffff;
+                margin-top: 50px;
+            }
+            p{
+                margin-top: 20px;
+            }
+            .ans{
+                display: none;
+                color: #629eda;
+                font-size: 30px;
+                margin-top: 20px;
+                transition: opacity 1s ease-in-out;
+            }
+            form {
+                display: flex;
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 10px;
+                display: inline-block;
+                margin-top: 20px;
+            }
+
+            input[type="number"] {
+                width: 100px;
+                padding: 10px;
+                border: 2px solid #4dacff;
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+            select {
+                padding: 10px;
+                border: 2px solid #4dacff;
+                border-radius: 5px;
+                margin-left: 10px;
+            }
+            button {
+                justify-content: center;
+                padding: 10px 20px;
+                margin-top: 20px;
+                background-color: #4dacff;
+                color: rgb(255, 255, 255);
+                font-size: 15px;
+                font-weight: bolder;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            table {
+                padding: 20px;
+                border: #ffffff 4px solid;
+                color: #fff;
+                border-collapse: collapse;
+                margin: 20px auto ;
+            }
+            #table{
+                display: none;
+            }
+            table th, table td {
+                border: 2.5px solid #ffffff;
+                background-color: #4dacff;
+                padding: 20px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Temperature Converter</h1>
+        <p>Convert temperatures between Celsius, Fahrenheit, and Kelvin.</p>   
+        <form >
+            <label for="from">Convert from:</label>
+                <select id="from">
+                    <option value="c">Celsius (°C)</option>
+                    <option value="f">Fahrenheit (°F)</option>
+                    <option value="k">Kelvin (K)</option>
+                </select>
+
+            <label for="to">Convert to:</label>
+                <select id="to">
+                    <option value="c">Celsius (°C)</option>
+                    <option value="f" selected>Fahrenheit (°F)</option>
+                    <option value="k">Kelvin (K)</option>
+                </select>
+                <br>
+            <label for="input">Enter temperature:</label>
+            <input type="number" id="input" placeholder="Enter temperature" required /><br>
+            <button type="button" class="convert" id="convert">CONVERT</button>
+            <h1 id="ans" class="ans"></h1>
+        </form>
+        <table  id="table">
+            <tr>
+                <th colspan="3">DATA TRACK</th>
+            </tr>      
+            <tr>
+                <th>FROM</th>
+                <th>TO</th>
+                <th>CONVERTED VALUE</th>
+            </tr>
+        </table>
+        <script>
+            document.getElementById("convert").addEventListener("click",function(){
+                let from = document.getElementById("from").value;
+                let to = document.getElementById("to").value;
+                let input = parseFloat(document.getElementById("input").value);
+                let ans = document.getElementById("ans");
+                console.log("Parsed input:", input); 
+                
+                if(isNaN(input)){
+                    ans.innerText = "Please enter a valid number";
+                    ans.style.display = "block";
+                    return;
+                }
+
+                setTimeout(() => {
+                    document.getElementById("ans").innerText = "Converting...";
+                    document.getElementById("ans").style.display = "block";
+                }, 100);
+                let result;
+                if(from =="c"){
+                    if(to == "f"){
+                        
+                        result = ((input*(9/5))+32);
+                    } else if(to == "k"){
+                        
+                        result = (input+273.15);
+                    } else {
+                        
+                        result = input ;
+                    }
+                }
+                else if(from =="f"){
+                    if(to == "c"){
+                        
+                        result = ((input-32)*(5/9)) ;
+                    } else if(to == "k"){
+                        
+                        result = (((input-32)*(5/9))+273.15);
+                    } else {
+                        
+                        result = input;
+                    }
+                }
+                else {
+                    if(to == "c"){
+                        
+                        result = (input-273.15) ;
+                    } else if(to == "f"){
+                        
+                        result = (((input-273.15)*(9/5))+32);
+                    } else {
+                        
+                        result = input ;
+                    }
+                }
+                console.log("Conversion result:", result);  
+                setTimeout(function() {
+                    document.getElementById("ans").innerText = result + " °" + to.toUpperCase();
+                    document.getElementById("ans").style.display = "block";
+                }, 1000);
+                let fromSelect = input  + " °"+from.toUpperCase();
+                let to_sel = " °" + to.toUpperCase()
+                let ans_val = result + " °" + to.toUpperCase(); 
+                
+                setTimeout( ()=>{
+                document.getElementById("table").style.display = "table";
+                document.getElementById("table").innerHTML +=
+                `
+                    <tr>
+                        <td>${fromSelect}</td>
+                        <td>${to_sel}</td>
+                        <td>${ans_val}</td>
+                    </tr>
+                `;
+                },1500);
+            });
+        </script>
+    </body>
+</html>

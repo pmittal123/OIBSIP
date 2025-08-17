@@ -1,0 +1,119 @@
+body{
+    background-color: #0e0e0e;
+    font-family: Arial, sans-serif;   
+}
+.warning ,.history{
+    color: #ff0000;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    display: none; 
+}
+.calc {
+    width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.calc .input{
+    height: 50px;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.input::-webkit-scrollbar {
+    height: 10px;
+}
+.input::-webkit-scrollbar-track{
+    background-color: #454545;
+    border-radius: 5px;
+}
+.input::-webkit-scrollbar-thumb{
+    background-color: #d51c1c;
+    border-radius: 5px;
+}
+
+.btn,.clear{
+    width: 70px;
+    height: 70px;
+    background-color: #3a3a3a;
+    color: #fff;
+    margin: 5px;
+    font-size: 24px;
+    border: 3px solid #9f9a9a;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #4a4a4a;
+}
+.clear {
+    width: 155px;
+    background-color: #e32f2f;
+    border: 3px solid #ffffff;
+}
+.cut {
+    color: #873838;
+    border: 3px solid #ffffff;
+    background-color: #db2a2a;
+}
+.clr{
+    background-color: #ffffff; color: #000000; font-weight: bolder; border: 3px solid #707070;
+}
+.clr:hover {
+    background-color: #c2c2c2;
+}
+.cut:hover {
+    background-color: #c33939;
+}
+
+span::before {
+    content: " ";
+    display: inline-flex;
+    width: 0;  
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+    transform: rotate(-90deg);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    vertical-align: middle;
+}
+span::after {
+    content: "x";
+    font-weight: bolder;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 19.5px;
+    width: 25px;
+    background-color: #ffffff;
+    vertical-align: middle;
+    position: relative;
+    left: -5px;
+}
+
+.history{
+    display: block;
+    background-color: #373636;
+    color: #fff;
+}
+.sapce{
+    padding-bottom :10px;
+}
+.history p{
+    align-items: center;
+    justify-content: center;
+    font-weight: 10;
+    font-size: 20px;
+}

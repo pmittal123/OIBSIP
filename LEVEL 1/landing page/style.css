@@ -1,0 +1,467 @@
+:root {
+    --primary: #1DB954;
+    --dark-bg: #151515;
+    --light: #ffffff;
+    --light-gray: #f4f4f4;
+}
+
+ 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-bg);
+    overflow-x: hidden;
+    color: var(--light);
+}
+
+ 
+header {
+    background-color: var(--primary);
+    color: var(--light);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2vw;
+    width: 100%;
+}
+
+ 
+.logo-img {
+    height: 10vw;
+    width: 10vw;
+    max-height: 50px;
+    max-width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+ 
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.8vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: bold;
+}
+
+ 
+.gs-btn {
+    background-color: var(--light);
+    color: var(--primary);
+    padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: clamp(14px, 2vw, 16px);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gs-btn:hover {
+    background-color: var(--light-gray);
+    transform: scale(1.1);
+}
+
+ 
+.con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-bg);
+    padding: 2rem;
+    gap: 2rem;
+    width: 100%;
+    position: relative;
+    margin: 100px auto;
+}
+
+.con section {
+    flex: 1 1 300px;
+    text-align: center;
+    color: var(--light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: clamp(2.5rem, 5vw, 2.5rem);
+}
+
+.con section button {
+    margin-top: 1rem;
+    transform: scale(1.1);
+    border: 3px solid #65ca86;
+    background-color: var(--dark-bg);
+    border-radius: 9px;
+    transition: transform 0.3s;
+}
+
+.con section button:hover {
+    transform: scale(1.2);
+    background-color: var(--dark-bg);
+}
+
+ 
+.con .symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #363333;
+    width: 25rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 25px rgba(0, 255, 21, 0.537);
+}
+.song{
+    animation: rotate 5s linear infinite;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+.con .symbol .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: repeating-radial-gradient(rgb(58, 58, 58),
+        rgb(13, 13, 13)1px,
+        rgb(0, 0, 0)5%,
+        rgb(241, 241, 241)4px,
+        rgb(0, 0, 0)3%,
+        rgb(187, 187, 187)4px,
+        rgb(2, 2, 2)1%,
+        rgb(11, 11, 11) 15%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.record-wrapper {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    margin: 20px auto;
+}
+@media (max-width:390px){
+    .record-wrapper{
+        margin-right: 220px;
+        scale: 0.7;
+    }
+}
+.symbol {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 25px rgba(0, 255, 21, 0.537);
+    background-color: #363333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.needle {
+    position: absolute;
+    width: 10rem;
+    height: 0.5rem;
+    background-color: #e0e0e0;
+    top: -1.5rem; /* Position needle above */
+    left: 60%;
+    transform-origin: left center;
+    transform: rotate(5deg);
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    transition: transform 1.2s ease;
+}
+.needle::before {
+    content: '';
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: #807070 3px solid;
+    background-color: #e0e0e0;
+    right: 0px; 
+    top: -0.7rem; 
+}
+
+.needle-on {
+    transform: rotate(55deg); /* Needle rotates down to "play" */
+}
+
+.con .symbol .red {
+    width: 50%;
+    height: 50%;
+    background: repeating-radial-gradient(
+        circle,
+        #a91f1f 0px,
+        #9b1e1e 1px,
+        #841818 1px,
+        #f95b5b 2px
+    );
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+}
+.hole{
+    width: 10%;
+    height: 10%;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn{
+    margin-bottom: 250px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    border: #841818 7px solid;
+    cursor: pointer;
+}
+.btn::before{
+    content: '';
+    z-index: 2;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.trailer {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #313432;
+}
+
+.trailer-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.trailer-track img {
+    width: 200px;
+    height: 200px;
+    margin: 20px 10px;
+    border: 2px solid #ffffff;
+    object-fit: cover;
+    transition: scale 0.3s ease infinite;
+}
+
+.trailer-track img:hover{
+    scale: 1.15;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+} 
+.payment {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1.5rem;
+    width: 80%;
+    background-color: var(--primary);
+    margin: 50px auto ;
+    color: var(--light);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.payment h2 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    margin-bottom: 0.5rem;
+}
+
+.payment p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 1rem;
+}
+
+.payment button {
+    background-color: var(--light);
+    color: var(--primary);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.payment button:hover {
+    background-color: var(--light-gray);
+}
+
+.payment ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    color: var(--light);
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    text-align: center;
+}
+
+.payment li {
+    margin: 0.3rem 0;
+}
+
+ 
+.free, .premium {
+    background-color: var(--dark-bg);
+    color: var(--primary);
+    border: 2px solid var(--light);
+    height: 430px;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.contact {
+    width: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-bg);
+    color: var(--light);
+}
+
+.contact form {
+    background-color: #1f1f1f;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact h2 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--primary);
+    text-align: center;
+}
+
+.contact p {
+    margin-bottom: 1.5rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    text-align: center;
+    color: var(--light-gray);
+}
+
+.contact label {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background-color: #2a2a2a;
+    color: var(--light);
+    resize: vertical;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border: 2px solid var(--primary);
+    background-color: #333;
+}
+
+.contact button {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 0.75rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #17a74a;
+    transform: scale(1.05);
+}
+
+ 
+footer {
+    background-color: #1a1a1a;
+    color: var(--light);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+    
+}
+
+
+
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.footer-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    scale: 50px;
+}
+
+.footer-text p,
+.footer-content p {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    margin: 0.5rem 0;
+}
