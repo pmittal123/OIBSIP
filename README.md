@@ -25,18 +25,6 @@ I built a **Spotify Landing Page** using **HTML, CSS, and JavaScript**.
 - CSS  
 - JavaScript  
 
----
-
-## ⚡ Level 2 Projects  
-
-### 📝 Tribute Page *(In Progress)*  
-- A responsive tribute page with structured content, media integration, and custom styling.  
-
-### 🔐 Login Authentication System *(Pending Upload)*  
-- User login form with validation, styled with CSS and basic JS validation.  
-
-### 📰 Blog Website *(In Progress)*  
-- A simple blog layout with multiple posts, categories, and responsive design.  
 
 ---
 
@@ -46,16 +34,10 @@ I built a **Spotify Landing Page** using **HTML, CSS, and JavaScript**.
 OSIS-INTERNSHIP/
 │
 ├── Level-1/
-│   ├── Spotify-Landing-Page/
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│
-├── Level-2/
-│   ├── Tribute-Page/
-│   ├── Login-Authentication/
-│   └── Blog-Website/
-│
+│     ├── Spotify-Landing-Page 
+│     ├── PORTFOLIO 
+│     └── Temperature Converter
+│ 
 └── README.md
 ```
 
