@@ -25,6 +25,37 @@ I built a **Spotify Landing Page** using **HTML, CSS, and JavaScript**.
 - CSS  
 - JavaScript  
 
+---
+
+### 🖼 Personal Portfolio  
+I created a **personal portfolio website** to showcase my skills, projects, and achievements.  
+
+#### ✨ Features  
+- 📌 About Me, Skills, and Projects sections  
+- 📂 Project showcase with links to GitHub  
+- 📱 Responsive design for all devices  
+- 🎨 Clean, modern, and professional UI  
+
+#### 🛠 Tech Stack  
+- HTML  
+- CSS  
+- JavaScript  
+
+---
+
+### 🌡 Temperature Converter  
+A simple **Temperature Converter** web app to convert values between **Celsius, Fahrenheit, and Kelvin**.  
+
+#### ✨ Features  
+- 🔄 Real-time conversion between temperature units  
+- 🧮 Accurate calculation logic  
+- 📱 Responsive for all screen sizes  
+- 🎨 Minimal and user-friendly UI  
+
+#### 🛠 Tech Stack  
+- HTML  
+- CSS  
+- JavaScript  
 
 ---
 
@@ -35,8 +66,8 @@ OSIS-INTERNSHIP/
 │
 ├── Level-1/
 │     ├── Spotify-Landing-Page 
-│     ├── PORTFOLIO 
-│     └── Temperature Converter
+│     ├── Portfolio 
+│     └── Temperature-Converter
 │ 
 └── README.md
 ```
@@ -52,3 +83,4 @@ JavaScript DOM manipulation & event handling
 Responsive Web Design (Media queries, mobile-first design)
 
 UI/UX fundamentals for clean design
+
