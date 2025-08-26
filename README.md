@@ -37,7 +37,7 @@ I created a **personal portfolio website** to showcase my skills, projects, and 
 - 🎨 Clean, modern, and professional UI  
 
 #### 📽 Demo Video  
-🔗 [Watch on LinkedIn]([https://www.linkedin.com/posts/priyanshu-mittal-b686181a9_webdevelopment-frontend-responsivedesign-activity-7361339488209395714-7uyU?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADCt5YAB-w43NQE7xx9nISJXcFC3mMPp2OI](https://www.linkedin.com/posts/priyanshu-mittal-b686181a9_webdevelopment-frontend-responsivedesign-activity-7363453418612408320-MK9b?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADCt5YAB-w43NQE7xx9nISJXcFC3mMPp2OI))  
+🔗 [Watch on LinkedIn](https://www.linkedin.com/posts/priyanshu-mittal-b686181a9_webdevelopment-frontend-responsivedesign-activity-7363453418612408320-MK9b?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADCt5YAB-w43NQE7xx9nISJXcFC3mMPp2OI)  
 
 #### 🛠 Tech Stack  
 - HTML  
@@ -56,7 +56,7 @@ A simple **Temperature Converter** web app to convert values between **Celsius, 
 - 🎨 Minimal and user-friendly UI  
 
 #### 📽 Demo Video  
-🔗 [Watch on LinkedIn]([https://www.linkedin.com/posts/priyanshu-mittal-b686181a9_webdevelopment-frontend-responsivedesign-activity-7361339488209395714-7uyU?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADCt5YAB-w43NQE7xx9nISJXcFC3mMPp2OI](https://www.linkedin.com/posts/priyanshu-mittal-b686181a9_webdevelopment-frontend-responsivedesign-activity-7364569948301492224-n_RW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADCt5YAB-w43NQE7xx9nISJXcFC3mMPp2OI))  
+🔗 [Watch on LinkedIn](https://www.linkedin.com/posts/priyanshu-mittal-b686181a9_webdevelopment-frontend-responsivedesign-activity-7364569948301492224-n_RW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADCt5YAB-w43NQE7xx9nISJXcFC3mMPp2OI)  
 
 #### 🛠 Tech Stack  
 - HTML  
@@ -89,6 +89,7 @@ OSIS-INTERNSHIP/
 - Responsive Web Design (Media queries, mobile-first design)
 
 - UI/UX fundamentals for clean design
+
 
 
 
