@@ -72,15 +72,16 @@ OSIS-INTERNSHIP/
 └── README.md
 ```
 
-##🎯 Skills Learned
+## 🎯 Skills Learned
 
-HTML5 semantics and structure
+- HTML5 semantics and structure
 
-CSS animations and layouts (Flexbox, Grid)
+- CSS animations and layouts (Flexbox, Grid)
 
-JavaScript DOM manipulation & event handling
+- JavaScript DOM manipulation & event handling
 
-Responsive Web Design (Media queries, mobile-first design)
+- Responsive Web Design (Media queries, mobile-first design)
 
-UI/UX fundamentals for clean design
+- UI/UX fundamentals for clean design
+
 
