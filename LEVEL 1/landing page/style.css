@@ -1,3 +1,4 @@
+/* pmittal */
 :root {
     --primary: #1DB954;
     --dark-bg: #151515;
@@ -5,7 +6,6 @@
     --light-gray: #f4f4f4;
 }
 
-/* pmittal */
 *,
 *::before,
 *::after {
